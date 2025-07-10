@@ -1,1 +1,17 @@
 Интернет магазин
+
+<div class="radio-group">
+  <label>
+    <input type="radio" name="viewType" [(ngModel)]="viewType" value="list">
+    Список
+  </label>
+  <label>
+    <input type="radio" name="viewType" [(ngModel)]="viewType" value="card">
+    Карточки
+  </label>
+</div>
+
+<app-product-list *ngIf="viewType === 'list'" [products]="products$ | async"></app-product-list>
+<app-product-card *ngIf="viewType === 'card'" [products]="products$ | async"></app-product-card>
+
+

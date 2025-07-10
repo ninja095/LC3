@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {ProductsService} from "./services/products.service";
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public counter = 0;
   title = 'LC1';
+
+  productsService = inject(ProductsService);
+
+  products$ = this.productsService.getProducts()
+
+  viewType = 'list';
+
+
 }

@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VisibleEventDirective } from './directive/visible-event.directive';
+import { ProductListComponent } from './product-List/product-list.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    VisibleEventDirective
+    ProductListComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

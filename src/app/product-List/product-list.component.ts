@@ -1,0 +1,11 @@
+import {Component, inject, Input} from '@angular/core';
+import {Product, ProductsService} from "../services/products.service";
+
+@Component({
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
+})
+export class ProductListComponent {
+  @Input() products: Product[] | null = null;
+}

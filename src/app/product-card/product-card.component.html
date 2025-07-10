@@ -1,0 +1,9 @@
+<div class="product-card-list">
+  <div *ngFor="let product of products">
+    <div *ngIf="product" class="product-card">
+      <p class="product-card-title">{{ product.name }}</p>
+      <p>Категория: {{ product.category }}</p>
+      <p class="product-card-price">Цена: {{ product.price }} руб</p>
+    </div>
+  </div>
+</div>
